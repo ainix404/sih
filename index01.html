@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>SmartClassroom Login</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <style>
+      body {
+        font-family: "Spline Sans", sans-serif;
+        min-height: max(884px, 100dvh);
+      }
+      /* Make the select's displayed text white in all browsers */
+      #login-as,
+      #login-as option {
+        color: #fff !important;
+      }
+    </style>
+  </head>
+
+  <body class="bg-emerald-950 text-white antialiased">
+    <div class="min-h-screen flex items-center justify-center px-6">
+      <!-- Bigger card for laptops -->
+      <div class="w-full max-w-xl md:max-w-2xl">
+        <header class="text-center mb-10">
+          <h1 class="text-3xl md:text-4xl font-bold tracking-tight">
+            SmartClassroom
+          </h1>
+        </header>
+
+        <main>
+          <div class="text-center mb-10">
+            <!-- Heading in white and larger -->
+            <h2
+              class="text-5xl md:text-6xl font-bold tracking-tight text-white"
+            >
+              Admin Login
+            </h2>
+            <p class="mt-4 text-emerald-300 text-lg md:text-xl">
+              Sign in to manage the platform
+            </p>
+          </div>
+
+          <form action="#" class="space-y-8">
+            <!-- Select (same color as inputs) -->
+            <div class="relative">
+              <label class="sr-only" for="login-as">Login As</label>
+              <select
+                id="login-as"
+                name="login-as"
+                class="w-full bg-emerald-900 border border-emerald-800 text-white placeholder-emerald-300 rounded-xl p-5 text-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition custom-select"
+                style="
+                  background-image: url('data:image/svg+xml,%3csvg xmlns=\'http://www.w3.org/2000/svg\' fill=\'none\' viewBox=\'0 0 20 20\'%3e%3cpath stroke=\'%234ade80\' stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'1.5\' d=\'M6 8l4 4 4-4\'/%3e%3c/svg%3e');
+                  background-repeat: no-repeat;
+                  background-position: right 1rem center;
+                  background-size: 1.25rem;
+                "
+              >
+                <option>Login as Student</option>
+                <option>Login as Educator</option>
+              </select>
+            </div>
+
+            <!-- Username -->
+            <div>
+              <label class="sr-only" for="username">Username</label>
+              <input
+                id="username"
+                name="username"
+                type="text"
+                required
+                class="w-full bg-emerald-900 border border-emerald-800 text-white placeholder-emerald-300 rounded-xl p-5 text-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition"
+                placeholder="Username"
+              />
+            </div>
+
+            <!-- Password -->
+            <div>
+              <label class="sr-only" for="password">Password</label>
+              <input
+                id="password"
+                name="password"
+                type="password"
+                required
+                class="w-full bg-emerald-900 border border-emerald-800 text-white placeholder-emerald-300 rounded-xl p-5 text-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition"
+                placeholder="Password"
+              />
+            </div>
+
+            <div class="flex items-center justify-end">
+              <!-- Forgot Password in red -->
+              <a
+                href="#"
+                class="text-base md:text-lg font-medium text-red-500 hover:text-red-400 transition"
+              >
+                Forgot Password?
+              </a>
+            </div>
+
+            <div class="pt-2">
+              <button
+                type="submit"
+                class="w-full bg-emerald-500 text-emerald-950 font-extrabold py-5 px-6 text-xl rounded-full hover:bg-emerald-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-emerald-950 focus:ring-emerald-500 transition"
+              >
+                Login
+              </button>
+            </div>
+          </form>
+        </main>
+
+        <footer class="p-6 text-center">
+          <p class="text-base md:text-lg text-emerald-300">
+            © 2023 SmartClassroom. All rights reserved.
+          </p>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
