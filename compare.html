@@ -1,0 +1,594 @@
+<html>
+  <head>
+    <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
+    <link
+      as="style"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Manrope%3Awght%40400%3B500%3B700%3B800&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
+      onload="this.rel='stylesheet'"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <meta charset="utf-8" />
+    <title>Stitch Design</title>
+    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <style type="text/tailwindcss">
+      :root {
+        --primary-50: #f0fdf4;
+        --primary-100: #dcfce7;
+        --primary-200: #bbf7d0;
+        --primary-300: #86efac;
+        --primary-400: #4ade80;
+        --primary-500: #22c55e;
+        --primary-600: #16a34a;
+        --primary-700: #15803d;
+        --primary-800: #166534;
+        --primary-900: #14532d;
+        --primary-950: #052e16;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-gray-50 text-gray-900"
+    style="font-family: Manrope, 'Noto Sans', sans-serif"
+  >
+    <div class="flex h-screen w-full">
+      <aside class="flex w-64 flex-col border-r border-gray-200 bg-white">
+        <div class="flex h-16 shrink-0 items-center gap-3 px-6">
+          <div
+            class="flex size-8 items-center justify-center rounded-lg bg-primary-500 text-white"
+          >
+            <svg
+              fill="none"
+              height="20"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+              <path d="M2 17l10 5 10-5"></path>
+              <path d="M2 12l10 5 10-5"></path>
+            </svg>
+          </div>
+          <h2 class="text-lg font-bold text-emerald-500">EduNex</h2>
+        </div>
+        <nav class="flex-1 space-y-2 p-4">
+          <a
+            class="flex items-center gap-3 rounded-md px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100"
+            href="#"
+          >
+            <span class="material-symbols-outlined text-xl">dashboard</span>
+            <span>Dashboard</span>
+          </a>
+          <a
+            class="flex items-center gap-3 rounded-md bg-primary-50 px-4 py-2 text-sm font-medium text-primary-600"
+            href="#"
+          >
+            <span class="material-symbols-outlined text-xl"
+              >calendar_today</span
+            >
+            <span>Timetables</span>
+          </a>
+          <a
+            class="flex items-center gap-3 rounded-md px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100"
+            href="#"
+          >
+            <span class="material-symbols-outlined text-xl">apartment</span>
+            <span>Rooms</span>
+          </a>
+          <a
+            class="flex items-center gap-3 rounded-md px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100"
+            href="#"
+          >
+            <span class="material-symbols-outlined text-xl">group</span>
+            <span>Faculty</span>
+          </a>
+          <a
+            class="flex items-center gap-3 rounded-md px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100"
+            href="#"
+          >
+            <span class="material-symbols-outlined text-xl">settings</span>
+            <span>Settings</span>
+          </a>
+        </nav>
+      </aside>
+      <div class="flex flex-1 flex-col">
+        <header
+          class="flex h-16 items-center justify-between border-b border-gray-200 bg-white px-6"
+        >
+          <div class="flex items-center gap-2 text-sm">
+            <a class="text-gray-500 hover:text-gray-700" href="#">Timetables</a>
+            <span class="text-gray-400">/</span>
+            <a class="text-gray-500 hover:text-gray-700" href="#"
+              >Timetable 2023</a
+            >
+            <span class="text-gray-400">/</span>
+            <span class="font-medium text-gray-800">Compare</span>
+          </div>
+          <div class="flex items-center gap-4">
+            <button
+              class="flex h-10 cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-md bg-primary-500 px-4 text-sm font-semibold text-white shadow-sm transition-all hover:bg-primary-600"
+            >
+              <span class="material-symbols-outlined">check_circle</span>
+              <span>Select Preferred Option</span>
+            </button>
+            <div
+              class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
+              style="
+                background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCqiKTYorMFgew05LAU3_6mrNVH0bX6w-fjCd01sORD_28uEmh8de7_JBEuys_qmFq47OP6of0EckciNTdx0QO-8XOHUpWDN7KIAKb6SQmaK8YMr0NNgZpuHLGkm37GIbuclIyrewslwxyjNXjaGFIbode4TLaCD4r87xaEvtm-x6idJ2NkWo8Dx-DFGvBIKWF02VeusUrlt6OvCjmlIXSYJWMH07zYvJdJifzRJaU65VsxmFLENM7SCkN8d00xJ3rm3FuLqBOaejS5');
+              "
+            ></div>
+          </div>
+        </header>
+        <main class="flex-1 overflow-y-auto p-6">
+          <div class="mb-6">
+            <h1 class="text-3xl font-bold">Compare Timetables</h1>
+            <p class="text-gray-500">
+              Select the best option to proceed with the scheduling.
+            </p>
+          </div>
+          <div class="grid grid-cols-1 gap-6 lg:grid-cols-3">
+            <div class="lg:col-span-2">
+              <div class="grid grid-cols-1 gap-6 xl:grid-cols-2">
+                <div
+                  class="flex flex-col gap-4 rounded-lg border border-gray-200 bg-white p-4"
+                >
+                  <div class="flex items-center justify-between">
+                    <h3 class="text-lg font-bold">Timetable Option 1</h3>
+                    <input
+                      class="h-4 w-4 border-gray-300 text-primary-600 focus:ring-primary-500"
+                      name="timetable_option"
+                      type="radio"
+                    />
+                  </div>
+                  <div class="overflow-x-auto rounded-md border">
+                    <table class="min-w-full divide-y divide-gray-200 text-sm">
+                      <thead class="bg-gray-50">
+                        <tr>
+                          <th
+                            class="px-4 py-2 text-left font-medium text-gray-600"
+                          >
+                            Time
+                          </th>
+                          <th
+                            class="px-4 py-2 text-left font-medium text-gray-600"
+                          >
+                            Mon
+                          </th>
+                          <th
+                            class="px-4 py-2 text-left font-medium text-gray-600"
+                          >
+                            Tue
+                          </th>
+                          <th
+                            class="px-4 py-2 text-left font-medium text-gray-600"
+                          >
+                            Wed
+                          </th>
+                          <th
+                            class="px-4 py-2 text-left font-medium text-gray-600"
+                          >
+                            Thu
+                          </th>
+                          <th
+                            class="px-4 py-2 text-left font-medium text-gray-600"
+                          >
+                            Fri
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody class="divide-y divide-gray-200 bg-white">
+                        <tr>
+                          <td class="whitespace-nowrap px-4 py-3 font-medium">
+                            8:00 AM
+                          </td>
+                          <td class="whitespace-nowrap px-4 py-3">
+                            <div
+                              class="rounded bg-primary-100 px-2 py-1 text-primary-800"
+                            >
+                              Math 101
+                              <span class="text-xs text-primary-600"
+                                >(R201)</span
+                              >
+                            </div>
+                          </td>
+                          <td class="whitespace-nowrap px-4 py-3">
+                            <div
+                              class="rounded bg-blue-100 px-2 py-1 text-blue-800"
+                            >
+                              Physics 201
+                              <span class="text-xs text-blue-600">(R202)</span>
+                            </div>
+                          </td>
+                          <td class="whitespace-nowrap px-4 py-3 bg-yellow-100">
+                            <div class="rounded px-2 py-1 text-yellow-800">
+                              Chem 301
+                              <span class="text-xs text-yellow-600"
+                                >(R301)</span
+                              >
+                            </div>
+                          </td>
+                          <td class="whitespace-nowrap px-4 py-3">
+                            <div
+                              class="rounded bg-purple-100 px-2 py-1 text-purple-800"
+                            >
+                              Bio 401
+                              <span class="text-xs text-purple-600"
+                                >(R401)</span
+                              >
+                            </div>
+                          </td>
+                          <td class="whitespace-nowrap px-4 py-3">
+                            <div
+                              class="rounded bg-red-100 px-2 py-1 text-red-800"
+                            >
+                              History 102
+                              <span class="text-xs text-red-600">(R102)</span>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="whitespace-nowrap px-4 py-3 font-medium">
+                            9:00 AM
+                          </td>
+                          <td class="whitespace-nowrap px-4 py-3">
+                            <div
+                              class="rounded bg-primary-100 px-2 py-1 text-primary-800"
+                            >
+                              Math 101
+                              <span class="text-xs text-primary-600"
+                                >(R201)</span
+                              >
+                            </div>
+                          </td>
+                          <td class="whitespace-nowrap px-4 py-3">
+                            <div
+                              class="rounded bg-blue-100 px-2 py-1 text-blue-800"
+                            >
+                              Physics 201
+                              <span class="text-xs text-blue-600">(R202)</span>
+                            </div>
+                          </td>
+                          <td class="whitespace-nowrap px-4 py-3 bg-yellow-100">
+                            <div class="rounded px-2 py-1 text-yellow-800">
+                              Chem 301
+                              <span class="text-xs text-yellow-600"
+                                >(R301)</span
+                              >
+                            </div>
+                          </td>
+                          <td class="whitespace-nowrap px-4 py-3">
+                            <div
+                              class="rounded bg-purple-100 px-2 py-1 text-purple-800"
+                            >
+                              Bio 401
+                              <span class="text-xs text-purple-600"
+                                >(R401)</span
+                              >
+                            </div>
+                          </td>
+                          <td class="whitespace-nowrap px-4 py-3">
+                            <div
+                              class="rounded bg-red-100 px-2 py-1 text-red-800"
+                            >
+                              History 102
+                              <span class="text-xs text-red-600">(R102)</span>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="whitespace-nowrap px-4 py-3 font-medium">
+                            10:00 AM
+                          </td>
+                          <td class="whitespace-nowrap px-4 py-3"></td>
+                          <td class="whitespace-nowrap px-4 py-3"></td>
+                          <td class="whitespace-nowrap px-4 py-3"></td>
+                          <td class="whitespace-nowrap px-4 py-3"></td>
+                          <td class="whitespace-nowrap px-4 py-3"></td>
+                        </tr>
+                        <tr>
+                          <td class="whitespace-nowrap px-4 py-3 font-medium">
+                            11:00 AM
+                          </td>
+                          <td class="whitespace-nowrap px-4 py-3"></td>
+                          <td class="whitespace-nowrap px-4 py-3"></td>
+                          <td class="whitespace-nowrap px-4 py-3"></td>
+                          <td class="whitespace-nowrap px-4 py-3"></td>
+                          <td class="whitespace-nowrap px-4 py-3"></td>
+                        </tr>
+                        <tr>
+                          <td class="whitespace-nowrap px-4 py-3 font-medium">
+                            12:00 PM
+                          </td>
+                          <td class="text-center text-gray-400" colspan="5">
+                            Lunch Break
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="whitespace-nowrap px-4 py-3 font-medium">
+                            1:00 PM
+                          </td>
+                          <td class="whitespace-nowrap px-4 py-3"></td>
+                          <td class="whitespace-nowrap px-4 py-3"></td>
+                          <td class="whitespace-nowrap px-4 py-3"></td>
+                          <td class="whitespace-nowrap px-4 py-3"></td>
+                          <td class="whitespace-nowrap px-4 py-3"></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div
+                  class="flex flex-col gap-4 rounded-lg border border-gray-200 bg-white p-4"
+                >
+                  <div class="flex items-center justify-between">
+                    <h3 class="text-lg font-bold">Timetable Option 2</h3>
+                    <input
+                      checked=""
+                      class="h-4 w-4 border-gray-300 text-primary-600 focus:ring-primary-500"
+                      name="timetable_option"
+                      type="radio"
+                    />
+                  </div>
+                  <div class="overflow-x-auto rounded-md border">
+                    <table class="min-w-full divide-y divide-gray-200 text-sm">
+                      <thead class="bg-gray-50">
+                        <tr>
+                          <th
+                            class="px-4 py-2 text-left font-medium text-gray-600"
+                          >
+                            Time
+                          </th>
+                          <th
+                            class="px-4 py-2 text-left font-medium text-gray-600"
+                          >
+                            Mon
+                          </th>
+                          <th
+                            class="px-4 py-2 text-left font-medium text-gray-600"
+                          >
+                            Tue
+                          </th>
+                          <th
+                            class="px-4 py-2 text-left font-medium text-gray-600"
+                          >
+                            Wed
+                          </th>
+                          <th
+                            class="px-4 py-2 text-left font-medium text-gray-600"
+                          >
+                            Thu
+                          </th>
+                          <th
+                            class="px-4 py-2 text-left font-medium text-gray-600"
+                          >
+                            Fri
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody class="divide-y divide-gray-200 bg-white">
+                        <tr>
+                          <td class="whitespace-nowrap px-4 py-3 font-medium">
+                            8:00 AM
+                          </td>
+                          <td class="whitespace-nowrap px-4 py-3">
+                            <div
+                              class="rounded bg-primary-100 px-2 py-1 text-primary-800"
+                            >
+                              Math 101
+                              <span class="text-xs text-primary-600"
+                                >(R201)</span
+                              >
+                            </div>
+                          </td>
+                          <td class="whitespace-nowrap px-4 py-3">
+                            <div
+                              class="rounded bg-blue-100 px-2 py-1 text-blue-800"
+                            >
+                              Physics 201
+                              <span class="text-xs text-blue-600">(R202)</span>
+                            </div>
+                          </td>
+                          <td class="whitespace-nowrap px-4 py-3">
+                            <div
+                              class="rounded bg-yellow-100 px-2 py-1 text-yellow-800"
+                            >
+                              Chem 301
+                              <span class="text-xs text-yellow-600"
+                                >(R301)</span
+                              >
+                            </div>
+                          </td>
+                          <td class="whitespace-nowrap px-4 py-3">
+                            <div
+                              class="rounded bg-purple-100 px-2 py-1 text-purple-800"
+                            >
+                              Bio 401
+                              <span class="text-xs text-purple-600"
+                                >(R401)</span
+                              >
+                            </div>
+                          </td>
+                          <td class="whitespace-nowrap px-4 py-3">
+                            <div
+                              class="rounded bg-red-100 px-2 py-1 text-red-800"
+                            >
+                              History 102
+                              <span class="text-xs text-red-600">(R102)</span>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="whitespace-nowrap px-4 py-3 font-medium">
+                            9:00 AM
+                          </td>
+                          <td class="whitespace-nowrap px-4 py-3 bg-yellow-100">
+                            <div class="rounded px-2 py-1 text-yellow-800">
+                              Chem 301
+                              <span class="text-xs text-yellow-600"
+                                >(R301)</span
+                              >
+                            </div>
+                          </td>
+                          <td class="whitespace-nowrap px-4 py-3">
+                            <div
+                              class="rounded bg-blue-100 px-2 py-1 text-blue-800"
+                            >
+                              Physics 201
+                              <span class="text-xs text-blue-600">(R202)</span>
+                            </div>
+                          </td>
+                          <td class="whitespace-nowrap px-4 py-3">
+                            <div
+                              class="rounded bg-primary-100 px-2 py-1 text-primary-800"
+                            >
+                              Math 101
+                              <span class="text-xs text-primary-600"
+                                >(R201)</span
+                              >
+                            </div>
+                          </td>
+                          <td class="whitespace-nowrap px-4 py-3">
+                            <div
+                              class="rounded bg-purple-100 px-2 py-1 text-purple-800"
+                            >
+                              Bio 401
+                              <span class="text-xs text-purple-600"
+                                >(R401)</span
+                              >
+                            </div>
+                          </td>
+                          <td class="whitespace-nowrap px-4 py-3">
+                            <div
+                              class="rounded bg-red-100 px-2 py-1 text-red-800"
+                            >
+                              History 102
+                              <span class="text-xs text-red-600">(R102)</span>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="whitespace-nowrap px-4 py-3 font-medium">
+                            10:00 AM
+                          </td>
+                          <td class="whitespace-nowrap px-4 py-3"></td>
+                          <td class="whitespace-nowrap px-4 py-3"></td>
+                          <td class="whitespace-nowrap px-4 py-3"></td>
+                          <td class="whitespace-nowrap px-4 py-3"></td>
+                          <td class="whitespace-nowrap px-4 py-3"></td>
+                        </tr>
+                        <tr>
+                          <td class="whitespace-nowrap px-4 py-3 font-medium">
+                            11:00 AM
+                          </td>
+                          <td class="whitespace-nowrap px-4 py-3"></td>
+                          <td class="whitespace-nowrap px-4 py-3"></td>
+                          <td class="whitespace-nowrap px-4 py-3"></td>
+                          <td class="whitespace-nowrap px-4 py-3"></td>
+                          <td class="whitespace-nowrap px-4 py-3"></td>
+                        </tr>
+                        <tr>
+                          <td class="whitespace-nowrap px-4 py-3 font-medium">
+                            12:00 PM
+                          </td>
+                          <td class="text-center text-gray-400" colspan="5">
+                            Lunch Break
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="whitespace-nowrap px-4 py-3 font-medium">
+                            1:00 PM
+                          </td>
+                          <td class="whitespace-nowrap px-4 py-3"></td>
+                          <td class="whitespace-nowrap px-4 py-3"></td>
+                          <td class="whitespace-nowrap px-4 py-3"></td>
+                          <td class="whitespace-nowrap px-4 py-3"></td>
+                          <td class="whitespace-nowrap px-4 py-3"></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="lg:col-span-1">
+              <div
+                class="sticky top-6 rounded-lg border border-gray-200 bg-white p-4"
+              >
+                <h3 class="mb-4 text-lg font-bold">Comparison Summary</h3>
+                <div class="space-y-4">
+                  <div
+                    class="flex items-center gap-4 rounded-md bg-gray-50 p-3"
+                  >
+                    <div
+                      class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-yellow-100 text-yellow-600"
+                    >
+                      <span class="material-symbols-outlined">swap_horiz</span>
+                    </div>
+                    <div>
+                      <p class="font-semibold">Moved Slots</p>
+                      <p class="text-sm text-gray-600">2 slots changed</p>
+                    </div>
+                    <div class="ml-auto text-lg font-bold text-yellow-600">
+                      2
+                    </div>
+                  </div>
+                  <div
+                    class="flex items-center gap-4 rounded-md bg-gray-50 p-3"
+                  >
+                    <div
+                      class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-blue-100 text-blue-600"
+                    >
+                      <span class="material-symbols-outlined"
+                        >room_preferences</span
+                      >
+                    </div>
+                    <div>
+                      <p class="font-semibold">Changed Rooms</p>
+                      <p class="text-sm text-gray-600">1 room changed</p>
+                    </div>
+                    <div class="ml-auto text-lg font-bold text-blue-600">1</div>
+                  </div>
+                  <div
+                    class="flex items-center gap-4 rounded-md bg-gray-50 p-3"
+                  >
+                    <div
+                      class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-green-100 text-green-600"
+                    >
+                      <span class="material-symbols-outlined">balance</span>
+                    </div>
+                    <div>
+                      <p class="font-semibold">Faculty Load</p>
+                      <p class="text-sm text-gray-600">Variance</p>
+                    </div>
+                    <div class="ml-auto text-lg font-bold text-green-600">
+                      5%
+                    </div>
+                  </div>
+                </div>
+                <div class="mt-6">
+                  <h4 class="font-bold">Legend</h4>
+                  <div class="mt-2 flex flex-wrap gap-4 text-sm">
+                    <div class="flex items-center gap-2">
+                      <div
+                        class="h-4 w-4 rounded bg-yellow-100 ring-2 ring-yellow-400"
+                      ></div>
+                      <span>Moved Slot</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

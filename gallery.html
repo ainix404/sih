@@ -1,0 +1,524 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Generated Timetable Options</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@400;500;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <style type="text/tailwindcss">
+      :root {
+        --primary-50: #f0fdf4;
+        --primary-100: #dcfce7;
+        --primary-200: #bbf7d0;
+        --primary-300: #86efac;
+        --primary-400: #4ade80;
+        --primary-500: #22c55e;
+        --primary-600: #16a34a;
+        --primary-700: #15803d;
+        --primary-800: #166534;
+        --primary-900: #14532d;
+        --primary-950: #052e16;
+      }
+      .slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 1rem;
+        height: 1rem;
+        border-radius: 9999px;
+        background-color: var(--primary-500);
+        cursor: pointer;
+        margin-top: -4px;
+        position: relative;
+        z-index: 10;
+        border: 2px solid white;
+        box-shadow: 0 0 0 1px #e5e7eb;
+      }
+      .slider-track {
+        height: 4px;
+        border-radius: 9999px;
+        background-color: #e5e7eb;
+        position: relative;
+      }
+      .slider-range {
+        height: 100%;
+        border-radius: 9999px;
+        background-color: var(--primary-500);
+        position: absolute;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-gray-50 text-gray-900"
+    style="font-family: 'Spline Sans', sans-serif"
+  >
+    <div class="flex h-screen">
+      <aside class="w-64 flex-shrink-0 border-r border-gray-200 bg-white">
+        <div class="flex h-16 items-center gap-3 px-6">
+          <!-- <div class="text-primary-500">
+            <span class="material-symbols-outlined text-4xl"> grid_view </span>
+          </div> -->
+          <h1 class="text-lg font-bold text-emerald-500">EduNex</h1>
+        </div>
+        <nav class="p-4">
+          <ul class="space-y-1">
+            <li>
+              <a
+                class="flex items-center gap-3 rounded-md px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100"
+                href="#"
+              >
+                <span class="material-symbols-outlined text-xl">dashboard</span>
+                Dashboard
+              </a>
+            </li>
+            <li>
+              <a
+                class="flex items-center gap-3 rounded-md bg-primary-100 px-4 py-2 text-sm font-bold text-primary-700"
+                href="#"
+              >
+                <span class="material-symbols-outlined text-xl"
+                  >calendar_month</span
+                >
+                Timetables
+              </a>
+            </li>
+            <li>
+              <a
+                class="flex items-center gap-3 rounded-md px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100"
+                href="#"
+              >
+                <span class="material-symbols-outlined text-xl"
+                  >meeting_room</span
+                >
+                Rooms
+              </a>
+            </li>
+            <li>
+              <a
+                class="flex items-center gap-3 rounded-md px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100"
+                href="#"
+              >
+                <span class="material-symbols-outlined text-xl">person</span>
+                Instructors
+              </a>
+            </li>
+            <li>
+              <a
+                class="flex items-center gap-3 rounded-md px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100"
+                href="#"
+              >
+                <span class="material-symbols-outlined text-xl">school</span>
+                Courses
+              </a>
+            </li>
+            <li>
+              <a
+                class="flex items-center gap-3 rounded-md px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100"
+                href="#"
+              >
+                <span class="material-symbols-outlined text-xl">settings</span>
+                Settings
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+      <div class="flex flex-1">
+        <main class="flex-1 overflow-y-auto">
+          <header
+            class="sticky top-0 z-10 flex h-16 items-center justify-between border-b border-gray-200 bg-white px-8"
+          >
+            <div class="flex items-center gap-2 text-sm text-gray-500">
+              <a class="hover:text-gray-900" href="#">Timetables</a>
+              <span class="material-symbols-outlined text-base"
+                >chevron_right</span
+              >
+              <span class="font-medium text-gray-900">Generated Options</span>
+            </div>
+            <div class="flex items-center gap-4">
+              <button
+                class="flex items-center justify-center gap-2 rounded-md bg-primary-600 px-4 py-2 text-sm font-bold text-white shadow-sm transition-colors hover:bg-primary-700"
+              >
+                <span>Regenerate Timetables</span>
+              </button>
+              <button class="relative">
+                <span class="material-symbols-outlined text-2xl text-gray-600"
+                  >notifications</span
+                >
+                <span
+                  class="absolute -top-1 -right-1 flex h-4 w-4 items-center justify-center rounded-full bg-red-500 text-xs text-white"
+                  >3</span
+                >
+              </button>
+              <div
+                class="h-10 w-10 rounded-full bg-cover bg-center"
+                style="
+                  background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDac30KSIsk2pkIBsrZBsTnZBuKfGzpdpaS2kaJViN0-J6qxLRLjUKJ7oh51hy-YxJDpF_og6aGZjgcDIjtaFnrG0emNjMRP4SgJN2G_7zRniaKKcUlqtmzG3T0VAk8FBRnMoTUNpI_-16beoiffCp00TqkAGTOdfn7ivRdBmeHfKRvINrYKpy73q4VupRq1KA4ehrGc0zwLwx-jAtmVPFHbx9g9hBV3lIeRroqNykqd33v1765DsmNNFou-0GXrlQM9UOUEKo2oc0K');
+                "
+              ></div>
+            </div>
+          </header>
+          <div class="p-8">
+            <div
+              class="mb-6 flex flex-wrap items-center justify-between gap-4 rounded-lg border border-gray-200 bg-white p-4"
+            >
+              <div class="flex flex-wrap items-center gap-4">
+                <div class="flex items-center gap-2">
+                  <label
+                    class="text-sm font-medium text-gray-700"
+                    for="score-filter"
+                    >Score:</label
+                  >
+                  <select
+                    class="rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500 sm:text-sm"
+                    id="score-filter"
+                  >
+                    <option>80%+</option>
+                    <option>90%+</option>
+                    <option>Any</option>
+                  </select>
+                </div>
+                <div class="flex items-center gap-2">
+                  <label
+                    class="text-sm font-medium text-gray-700"
+                    for="utilization-filter"
+                    >Utilization %:</label
+                  >
+                  <select
+                    class="rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500 sm:text-sm"
+                    id="utilization-filter"
+                  >
+                    <option>85%+</option>
+                    <option>90%+</option>
+                    <option>Any</option>
+                  </select>
+                </div>
+                <div class="flex items-center gap-2">
+                  <label
+                    class="text-sm font-medium text-gray-700"
+                    for="satisfaction-filter"
+                    >Preference Satisfaction:</label
+                  >
+                  <select
+                    class="rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500 sm:text-sm"
+                    id="satisfaction-filter"
+                  >
+                    <option>High</option>
+                    <option>Medium</option>
+                    <option>Any</option>
+                  </select>
+                </div>
+              </div>
+              <div class="flex items-center gap-2">
+                <button
+                  class="flex items-center gap-2 rounded-md border border-gray-300 bg-white px-3 py-1.5 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50"
+                >
+                  Sort by: Score
+                  <span class="material-symbols-outlined text-lg"
+                    >arrow_downward</span
+                  >
+                </button>
+              </div>
+            </div>
+            <div
+              class="grid grid-cols-1 gap-6 @container sm:grid-cols-2 xl:grid-cols-3"
+            >
+              <div
+                class="group overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm transition-all hover:shadow-lg"
+              >
+                <div class="p-5">
+                  <div class="mb-4 flex items-start justify-between">
+                    <div>
+                      <h3 class="text-lg font-bold text-gray-900">
+                        Timetable Option 1
+                      </h3>
+                      <p class="text-sm text-gray-500">
+                        Generated on 24 May 2024
+                      </p>
+                    </div>
+                    <div
+                      class="flex items-center gap-2 rounded-full bg-primary-100 px-3 py-1 text-sm font-bold text-primary-700"
+                    >
+                      <span class="material-symbols-outlined text-base"
+                        >military_tech</span
+                      >
+                      <span>95%</span>
+                    </div>
+                  </div>
+                  <div class="mb-4 space-y-2 text-sm text-gray-700">
+                    <div class="flex items-center gap-2">
+                      <span
+                        class="material-symbols-outlined text-lg text-green-500"
+                        >check_circle</span
+                      >
+                      <span>High instructor satisfaction (98%)</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                      <span
+                        class="material-symbols-outlined text-lg text-green-500"
+                        >check_circle</span
+                      >
+                      <span>Room utilization at 92%</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                      <span
+                        class="material-symbols-outlined text-lg text-yellow-500"
+                        >warning</span
+                      >
+                      <span>Slightly lower student preference match</span>
+                    </div>
+                  </div>
+                  <div class="flex gap-2">
+                    <button
+                      class="flex-1 rounded-md bg-white px-3 py-1.5 text-sm font-medium text-gray-700 ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
+                    >
+                      Preview
+                    </button>
+                    <button
+                      class="flex-1 rounded-md bg-white px-3 py-1.5 text-sm font-medium text-gray-700 ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
+                    >
+                      Compare
+                    </button>
+                  </div>
+                  <button
+                    class="mt-3 w-full rounded-md bg-primary-600 px-3 py-1.5 text-sm font-bold text-white hover:bg-primary-700"
+                  >
+                    Send for Review
+                  </button>
+                </div>
+              </div>
+              <div
+                class="group overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm transition-all hover:shadow-lg"
+              >
+                <div class="p-5">
+                  <div class="mb-4 flex items-start justify-between">
+                    <div>
+                      <h3 class="text-lg font-bold text-gray-900">
+                        Timetable Option 2
+                      </h3>
+                      <p class="text-sm text-gray-500">
+                        Generated on 24 May 2024
+                      </p>
+                    </div>
+                    <div
+                      class="flex items-center gap-2 rounded-full bg-primary-100 px-3 py-1 text-sm font-bold text-primary-700"
+                    >
+                      <span class="material-symbols-outlined text-base"
+                        >military_tech</span
+                      >
+                      <span>92%</span>
+                    </div>
+                  </div>
+                  <div class="mb-4 space-y-2 text-sm text-gray-700">
+                    <div class="flex items-center gap-2">
+                      <span
+                        class="material-symbols-outlined text-lg text-green-500"
+                        >check_circle</span
+                      >
+                      <span>Optimized for student preferences (95%)</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                      <span
+                        class="material-symbols-outlined text-lg text-green-500"
+                        >check_circle</span
+                      >
+                      <span>Fewer morning classes</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                      <span
+                        class="material-symbols-outlined text-lg text-green-500"
+                        >check_circle</span
+                      >
+                      <span>Room utilization at 88%</span>
+                    </div>
+                  </div>
+                  <div class="flex gap-2">
+                    <button
+                      class="flex-1 rounded-md bg-white px-3 py-1.5 text-sm font-medium text-gray-700 ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
+                    >
+                      Preview
+                    </button>
+                    <button
+                      class="flex-1 rounded-md bg-white px-3 py-1.5 text-sm font-medium text-gray-700 ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
+                    >
+                      Compare
+                    </button>
+                  </div>
+                  <button
+                    class="mt-3 w-full rounded-md bg-primary-600 px-3 py-1.5 text-sm font-bold text-white hover:bg-primary-700"
+                  >
+                    Send for Review
+                  </button>
+                </div>
+              </div>
+              <div
+                class="group overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm transition-all hover:shadow-lg"
+              >
+                <div class="p-5">
+                  <div class="mb-4 flex items-start justify-between">
+                    <div>
+                      <h3 class="text-lg font-bold text-gray-900">
+                        Timetable Option 3
+                      </h3>
+                      <p class="text-sm text-gray-500">
+                        Generated on 24 May 2024
+                      </p>
+                    </div>
+                    <div
+                      class="flex items-center gap-2 rounded-full bg-primary-100 px-3 py-1 text-sm font-bold text-primary-700"
+                    >
+                      <span class="material-symbols-outlined text-base"
+                        >military_tech</span
+                      >
+                      <span>89%</span>
+                    </div>
+                  </div>
+                  <div class="mb-4 space-y-2 text-sm text-gray-700">
+                    <div class="flex items-center gap-2">
+                      <span
+                        class="material-symbols-outlined text-lg text-green-500"
+                        >check_circle</span
+                      >
+                      <span>Highest room utilization (98%)</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                      <span
+                        class="material-symbols-outlined text-lg text-yellow-500"
+                        >warning</span
+                      >
+                      <span>More back-to-back classes for students</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                      <span
+                        class="material-symbols-outlined text-lg text-yellow-500"
+                        >warning</span
+                      >
+                      <span>Lower instructor satisfaction (80%)</span>
+                    </div>
+                  </div>
+                  <div class="flex gap-2">
+                    <button
+                      class="flex-1 rounded-md bg-white px-3 py-1.5 text-sm font-medium text-gray-700 ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
+                    >
+                      Preview
+                    </button>
+                    <button
+                      class="flex-1 rounded-md bg-white px-3 py-1.5 text-sm font-medium text-gray-700 ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
+                    >
+                      Compare
+                    </button>
+                  </div>
+                  <button
+                    class="mt-3 w-full rounded-md bg-primary-600 px-3 py-1.5 text-sm font-bold text-white hover:bg-primary-700"
+                  >
+                    Send for Review
+                  </button>
+                </div>
+              </div>
+              <div
+                class="flex flex-col items-center justify-center rounded-lg border-2 border-dashed border-gray-300 bg-gray-50/50 p-12 text-center sm:col-span-2 xl:col-span-3"
+              >
+                <span class="material-symbols-outlined text-6xl text-gray-400"
+                  >search_off</span
+                >
+                <h3 class="mt-4 text-lg font-semibold text-gray-900">
+                  No Options Found
+                </h3>
+                <p class="mt-1 text-sm text-gray-500">
+                  No timetable options match your current filter settings. Try
+                  adjusting your constraints for a broader search.
+                </p>
+                <button
+                  class="mt-4 rounded-md bg-primary-100 px-4 py-2 text-sm font-bold text-primary-700 hover:bg-primary-200"
+                >
+                  Adjust Constraints
+                </button>
+              </div>
+            </div>
+          </div>
+        </main>
+        <aside
+          class="hidden w-80 flex-shrink-0 border-l border-gray-200 bg-white p-6 lg:block"
+        >
+          <div class="space-y-6">
+            <h3 class="text-lg font-semibold">Filter &amp; Sort</h3>
+            <div>
+              <label
+                class="mb-2 flex justify-between text-sm font-medium text-gray-700"
+                for="score-range"
+              >
+                <span>Score</span>
+                <span class="font-bold text-primary-600">80% or higher</span>
+              </label>
+              <div class="slider-track">
+                <div class="slider-range" style="left: 80%; right: 0%"></div>
+                <input
+                  class="slider-thumb w-full"
+                  id="score-range"
+                  max="100"
+                  min="0"
+                  type="range"
+                  value="80"
+                />
+              </div>
+            </div>
+            <div>
+              <label
+                class="mb-2 flex justify-between text-sm font-medium text-gray-700"
+                for="utilization-range"
+              >
+                <span>Utilization %</span>
+                <span class="font-bold text-primary-600">85% or higher</span>
+              </label>
+              <div class="slider-track">
+                <div class="slider-range" style="left: 85%; right: 0%"></div>
+                <input
+                  class="slider-thumb w-full"
+                  id="utilization-range"
+                  max="100"
+                  min="0"
+                  type="range"
+                  value="85"
+                />
+              </div>
+            </div>
+            <div>
+              <label
+                class="mb-2 flex justify-between text-sm font-medium text-gray-700"
+                for="satisfaction-range"
+              >
+                <span>Preference Satisfaction %</span>
+                <span class="font-bold text-primary-600">70% or higher</span>
+              </label>
+              <div class="slider-track">
+                <div class="slider-range" style="left: 70%; right: 0%"></div>
+                <input
+                  class="slider-thumb w-full"
+                  id="satisfaction-range"
+                  max="100"
+                  min="0"
+                  type="range"
+                  value="70"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="mt-8 border-t border-gray-200 pt-6">
+            <h3 class="text-lg font-semibold">Ads</h3>
+            <div class="mt-4 rounded-lg bg-gray-100 p-4 text-center">
+              <p class="text-sm text-gray-500">
+                Optional ad space. Hidden for admin users.
+              </p>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </body>
+</html>

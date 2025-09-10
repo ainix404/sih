@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
+    <link
+      as="style"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Manrope%3Awght%40400%3B500%3B700%3B800&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
+      onload="this.rel='stylesheet'"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <title>Stitch Design</title>
+    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <style type="text/tailwindcss">
+      :root {
+        --primary-color: #38e07b;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 font-manrope text-gray-900">
+    <div class="flex min-h-screen">
+      <aside class="w-64 bg-white border-r border-gray-200 flex flex-col">
+        <div class="flex items-center gap-3 h-16 px-6 border-b border-gray-200">
+          <!-- <div
+            class="w-8 h-8 bg-[var(--primary-color)] rounded-lg text-white flex items-center justify-center"
+          >
+            <span class="material-symbols-outlined"> school </span>
+          </div> -->
+          <h1 class="text-xl font-bold text-emerald-500">EduNex</h1>
+        </div>
+        <nav class="flex-1 p-4 space-y-2">
+          <a
+            class="flex items-center gap-3 px-4 py-2 rounded-md text-gray-700 hover:bg-gray-100"
+            href="#"
+          >
+            <span class="material-symbols-outlined"> dashboard </span>
+            <span>Dashboard</span>
+          </a>
+          <a
+            class="flex items-center gap-3 px-4 py-2 rounded-md text-gray-700 hover:bg-gray-100 bg-gray-100"
+            href="#"
+          >
+            <span class="material-symbols-outlined"> table_chart </span>
+            <span>Batches</span>
+          </a>
+          <a
+            class="flex items-center gap-3 px-4 py-2 rounded-md text-gray-700 hover:bg-gray-100"
+            href="#"
+          >
+            <span class="material-symbols-outlined"> event_note </span>
+            <span>Timetable</span>
+          </a>
+          <a
+            class="flex items-center gap-3 px-4 py-2 rounded-md text-gray-700 hover:bg-gray-100"
+            href="#"
+          >
+            <span class="material-symbols-outlined"> check_circle </span>
+            <span>Attendance</span>
+          </a>
+          <a
+            class="flex items-center gap-3 px-4 py-2 rounded-md text-gray-700 hover:bg-gray-100"
+            href="#"
+          >
+            <span class="material-symbols-outlined"> description </span>
+            <span>Exams</span>
+          </a>
+          <a
+            class="flex items-center gap-3 px-4 py-2 rounded-md text-gray-700 hover:bg-gray-100"
+            href="#"
+          >
+            <span class="material-symbols-outlined"> stacked_bar_chart </span>
+            <span>Results</span>
+          </a>
+          <a
+            class="flex items-center gap-3 px-4 py-2 rounded-md text-gray-700 hover:bg-gray-100"
+            href="#"
+          >
+            <span class="material-symbols-outlined"> settings </span>
+            <span>Settings</span>
+          </a>
+        </nav>
+      </aside>
+      <main class="flex-1 flex flex-col">
+        <header
+          class="h-16 bg-white border-b border-gray-200 flex items-center justify-between px-8"
+        >
+          <div class="flex items-center gap-2 text-sm text-gray-500">
+            <a class="hover:text-gray-900" href="#">Academics</a>
+            <span class="material-symbols-outlined text-base"
+              >chevron_right</span
+            >
+            <span class="font-medium text-gray-800">Batches</span>
+          </div>
+          <div class="flex items-center gap-4">
+            <button
+              class="flex items-center gap-2 text-sm font-medium text-gray-700 hover:text-gray-900"
+            >
+              <span class="material-symbols-outlined"> upload </span>
+              Import CSV
+            </button>
+            <button
+              class="flex items-center gap-2 bg-[var(--primary-color)] text-black px-4 py-2 rounded-md text-sm font-bold hover:opacity-90"
+            >
+              <span class="material-symbols-outlined"> add </span>
+              Add Batch
+            </button>
+            <div
+              class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
+              style="
+                background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCPMHeyDPIJoL6OEOKq6bapROEe1xiGuJyxrXKbYQEDOPn9qBLcyXbAEGTEKfWegrzCyzYA6RqfPYcHZS8ovNTHB-ie1aHiY7G260hWdfbB7GVE47B8yS-g2m9UXSfLZD5FcuaORgRi2-PR-ayLAIum4E6vNy71TXjY_bADaxpzkuGwBb5L7CmRduqRoT1yUsq7yEuaQJOd8jhzuAk9mZcwSwYlVmHPXOszrP2BdHWPgjHdVdpHLEeVkA7JYOaDPsWPvSOd06kB9ADa');
+              "
+            ></div>
+          </div>
+        </header>
+        <div class="flex-1 grid grid-cols-1 lg:grid-cols-3 gap-8 p-8">
+          <div class="lg:col-span-2">
+            <div class="flex justify-between items-center mb-6">
+              <h2 class="text-3xl font-bold tracking-tight">Batches</h2>
+              <div class="relative w-full max-w-sm">
+                <span
+                  class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"
+                >
+                  search
+                </span>
+                <input
+                  class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)]/50 focus:border-[var(--primary-color)]"
+                  placeholder="Search by program, semester, or department"
+                  type="text"
+                />
+              </div>
+            </div>
+            <div
+              class="bg-white border border-gray-200 rounded-lg overflow-hidden"
+            >
+              <table class="w-full">
+                <thead class="bg-gray-50 border-b border-gray-200">
+                  <tr>
+                    <th
+                      class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                    >
+                      Program
+                    </th>
+                    <th
+                      class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                    >
+                      Semester
+                    </th>
+                    <th
+                      class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                    >
+                      Size
+                    </th>
+                    <th
+                      class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                    >
+                      Department
+                    </th>
+                    <th
+                      class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                    >
+                      Shift
+                    </th>
+                    <th
+                      class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                    >
+                      Linked Electives
+                    </th>
+                    <th
+                      class="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider"
+                    >
+                      Actions
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-200">
+                  <tr>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"
+                    >
+                      B.Tech
+                    </td>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+                    >
+                      Semester 1
+                    </td>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+                    >
+                      60
+                    </td>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+                    >
+                      Computer Science
+                    </td>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+                    >
+                      Morning
+                    </td>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+                    >
+                      2
+                    </td>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm font-medium text-right"
+                    >
+                      <button class="text-gray-600 hover:text-gray-900">
+                        <span class="material-symbols-outlined"
+                          >more_horiz</span
+                        >
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"
+                    >
+                      B.Tech
+                    </td>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+                    >
+                      Semester 2
+                    </td>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+                    >
+                      75
+                    </td>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+                    >
+                      Electrical Engineering
+                    </td>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+                    >
+                      Afternoon
+                    </td>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+                    >
+                      3
+                    </td>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm font-medium text-right"
+                    >
+                      <button class="text-gray-600 hover:text-gray-900">
+                        <span class="material-symbols-outlined"
+                          >more_horiz</span
+                        >
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"
+                    >
+                      B.Tech
+                    </td>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+                    >
+                      Semester 3
+                    </td>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+                    >
+                      50
+                    </td>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+                    >
+                      Mechanical Engineering
+                    </td>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+                    >
+                      Morning
+                    </td>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+                    >
+                      1
+                    </td>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm font-medium text-right"
+                    >
+                      <button class="text-gray-600 hover:text-gray-900">
+                        <span class="material-symbols-outlined"
+                          >more_horiz</span
+                        >
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"
+                    >
+                      B.Tech
+                    </td>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+                    >
+                      Semester 4
+                    </td>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+                    >
+                      80
+                    </td>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+                    >
+                      Civil Engineering
+                    </td>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+                    >
+                      Afternoon
+                    </td>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+                    >
+                      4
+                    </td>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm font-medium text-right"
+                    >
+                      <button class="text-gray-600 hover:text-gray-900">
+                        <span class="material-symbols-outlined"
+                          >more_horiz</span
+                        >
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"
+                    >
+                      B.Tech
+                    </td>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+                    >
+                      Semester 5
+                    </td>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+                    >
+                      65
+                    </td>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+                    >
+                      Chemical Engineering
+                    </td>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+                    >
+                      Morning
+                    </td>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
+                    >
+                      2
+                    </td>
+                    <td
+                      class="px-6 py-4 whitespace-nowrap text-sm font-medium text-right"
+                    >
+                      <button class="text-gray-600 hover:text-gray-900">
+                        <span class="material-symbols-outlined"
+                          >more_horiz</span
+                        >
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div
+            class="lg:col-span-1 bg-white border border-gray-200 rounded-lg p-6 h-fit"
+          >
+            <h3 class="text-lg font-bold mb-6">Elective Linker</h3>
+            <form class="space-y-6">
+              <div>
+                <label
+                  class="block text-sm font-medium text-gray-700"
+                  for="program"
+                  >Program</label
+                >
+                <select
+                  class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-[var(--primary-color)] focus:border-[var(--primary-color)] sm:text-sm rounded-md"
+                  id="program"
+                  name="program"
+                >
+                  <option>Select Program</option>
+                  <option>B.Tech</option>
+                </select>
+              </div>
+              <div>
+                <label
+                  class="block text-sm font-medium text-gray-700"
+                  for="semester"
+                  >Semester</label
+                >
+                <select
+                  class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-[var(--primary-color)] focus:border-[var(--primary-color)] sm:text-sm rounded-md"
+                  id="semester"
+                  name="semester"
+                >
+                  <option>Select Semester</option>
+                  <option>Semester 1</option>
+                </select>
+              </div>
+              <div>
+                <label
+                  class="block text-sm font-medium text-gray-700"
+                  for="department"
+                  >Department</label
+                >
+                <select
+                  class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-[var(--primary-color)] focus:border-[var(--primary-color)] sm:text-sm rounded-md"
+                  id="department"
+                  name="department"
+                >
+                  <option>Select Department</option>
+                  <option>Computer Science</option>
+                </select>
+              </div>
+              <div>
+                <label
+                  class="block text-sm font-medium text-gray-700"
+                  for="shift"
+                  >Shift</label
+                >
+                <select
+                  class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-[var(--primary-color)] focus:border-[var(--primary-color)] sm:text-sm rounded-md"
+                  id="shift"
+                  name="shift"
+                >
+                  <option>Select Shift</option>
+                  <option>Morning</option>
+                </select>
+              </div>
+              <div>
+                <label
+                  class="block text-sm font-medium text-gray-700"
+                  for="elective"
+                  >Elective</label
+                >
+                <select
+                  class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-[var(--primary-color)] focus:border-[var(--primary-color)] sm:text-sm rounded-md"
+                  id="elective"
+                  name="elective"
+                >
+                  <option>Select Elective</option>
+                  <option>Data Structures</option>
+                </select>
+              </div>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gray-100 text-gray-800"
+                >
+                  Batch A
+                  <button
+                    class="ml-1.5 flex-shrink-0 text-gray-400 hover:text-gray-500"
+                    type="button"
+                  >
+                    <span class="sr-only">Remove</span>
+                    <svg
+                      class="h-2 w-2"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 8 8"
+                    >
+                      <path
+                        d="M1 1l6 6m0-6L1 7"
+                        stroke-linecap="round"
+                        stroke-width="1.5"
+                      ></path>
+                    </svg>
+                  </button>
+                </span>
+                <span
+                  class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gray-100 text-gray-800"
+                >
+                  Batch B
+                  <button
+                    class="ml-1.5 flex-shrink-0 text-gray-400 hover:text-gray-500"
+                    type="button"
+                  >
+                    <span class="sr-only">Remove</span>
+                    <svg
+                      class="h-2 w-2"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 8 8"
+                    >
+                      <path
+                        d="M1 1l6 6m0-6L1 7"
+                        stroke-linecap="round"
+                        stroke-width="1.5"
+                      ></path>
+                    </svg>
+                  </button>
+                </span>
+                <span
+                  class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gray-100 text-gray-800"
+                >
+                  Batch C
+                  <button
+                    class="ml-1.5 flex-shrink-0 text-gray-400 hover:text-gray-500"
+                    type="button"
+                  >
+                    <span class="sr-only">Remove</span>
+                    <svg
+                      class="h-2 w-2"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 8 8"
+                    >
+                      <path
+                        d="M1 1l6 6m0-6L1 7"
+                        stroke-linecap="round"
+                        stroke-width="1.5"
+                      ></path>
+                    </svg>
+                  </button>
+                </span>
+              </div>
+              <button
+                class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-bold text-black bg-[var(--primary-color)] hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[var(--primary-color)]"
+                type="submit"
+              >
+                Link Electives
+              </button>
+            </form>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

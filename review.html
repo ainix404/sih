@@ -1,0 +1,423 @@
+<html>
+  <head>
+    <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
+    <link
+      as="style"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Spline+Sans%3Awght%40400%3B500%3B700"
+      onload="this.rel='stylesheet'"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <title>Stitch Design</title>
+    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <meta charset="utf-8" />
+  </head>
+  <body
+    class="bg-gray-50"
+    style="font-family: 'Spline Sans', 'Noto Sans', sans-serif"
+  >
+    <div class="flex h-screen">
+      <aside class="w-64 flex flex-col border-r bg-white">
+        <div class="p-6 flex items-center gap-3">
+          <div class="text-[#38e07b] size-8">
+            <svg
+              fill="none"
+              viewBox="0 0 48 48"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <!-- <path
+                clip-rule="evenodd"
+                d="M39.475 21.6262C40.358 21.4363 40.6863 21.5589 40.7581 21.5934C40.7876 21.655 40.8547 21.857 40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 21.5934 40.7581C21.5589 40.6863 21.4363 40.358 21.6262 39.475C21.8562 38.4054 22.4689 36.9657 23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 28.7621 28.762C30.9744 26.5497 33.2417 24.7574 35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 44.659 25.5148 44.1631 26.9723 43.4579C29.9052 42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 25.5148 44.659 24.0585 44.7893 22.7217C44.9179 21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 11.5858C9.18354 13.988 7.18717 16.4978 5.74802 18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z"
+                fill="currentColor"
+                fill-rule="evenodd"
+              ></path> -->
+            </svg>
+          </div>
+          <h2 class="text-xl font-bold text-emerald-500">EduNex</h2>
+        </div>
+        <nav class="flex-1 px-4 py-2 space-y-2">
+          <a
+            class="flex items-center gap-3 px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-md"
+            href="#"
+          >
+            <span class="material-symbols-outlined">dashboard</span>
+            Dashboard
+          </a>
+          <a
+            class="flex items-center gap-3 px-4 py-2 text-gray-900 bg-gray-100 rounded-md font-semibold"
+            href="#"
+          >
+            <span class="material-symbols-outlined">calendar_today</span>
+            Timetables
+          </a>
+          <a
+            class="flex items-center gap-3 px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-md"
+            href="#"
+          >
+            <span class="material-symbols-outlined">domain</span>
+            Rooms
+          </a>
+          <a
+            class="flex items-center gap-3 px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-md"
+            href="#"
+          >
+            <span class="material-symbols-outlined">book</span>
+            Courses
+          </a>
+          <a
+            class="flex items-center gap-3 px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-md"
+            href="#"
+          >
+            <span class="material-symbols-outlined">group</span>
+            Users
+          </a>
+        </nav>
+        <div class="px-4 py-2">
+          <a
+            class="flex items-center gap-3 px-4 py-2 text-gray-600 hover:bg-gray-100 rounded-md"
+            href="#"
+          >
+            <span class="material-symbols-outlined">help_outline</span>
+            Help and Docs
+          </a>
+        </div>
+      </aside>
+      <main class="flex-1 flex flex-col">
+        <header
+          class="flex items-center justify-between border-b bg-white px-6 py-4"
+        >
+          <div class="flex items-center gap-2 text-sm text-gray-500">
+            <a class="hover:text-gray-700" href="#">Timetables</a>
+          </div>
+          <div class="flex items-center gap-4">
+            <button
+              class="bg-[#38e07b] text-white px-4 py-2 rounded-md text-sm font-semibold hover:bg-opacity-90 flex items-center gap-2"
+            >
+              <span class="material-symbols-outlined">add</span>
+              Generate Timetable
+            </button>
+            <button class="text-gray-500 hover:text-gray-700">
+              <span class="material-symbols-outlined">notifications</span>
+            </button>
+            <div
+              class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
+              style="
+                background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAAZaTJjz7MvCYzW89b54j2GUFhWFj_OKKN7Agz-cQeEOvctx10vCq5M-ERl9dA3I95RO8e2yEE4Hi4z9vvbm8WxlnDYndk3Ve1FDdSfAGUkph1P0nsIRD7XpgsE_Bfxd0bD5mqB-vfRbT4UIE5sxUcLR2zNTzdhtk6iRqWfpCCNMtyg6zKgR9L1IAflsOEniQMQ5R7e1yBb1kdcGM7ENagYaO7XLwq1z57KaI3TzH8_7V4odRTCwDqYvgfpwUOauLZ8c0VjkAJcPU6');
+              "
+            ></div>
+          </div>
+        </header>
+        <div class="flex-1 flex overflow-hidden">
+          <div class="flex-1 p-6 overflow-y-auto">
+            <h1 class="text-3xl font-bold text-gray-800 mb-6">
+              Submitted Timetables
+            </h1>
+            <div class="bg-white rounded-lg border overflow-hidden">
+              <table class="w-full text-sm">
+                <thead class="bg-gray-50">
+                  <tr class="text-left text-gray-600">
+                    <th class="p-3 font-medium">Timetable</th>
+                    <th class="p-3 font-medium">Owner</th>
+                    <th class="p-3 font-medium">Date Submitted</th>
+                    <th class="p-3 font-medium">Status</th>
+                    <th class="p-3 font-medium text-center">Comments</th>
+                    <th class="p-3 font-medium"></th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y">
+                  <tr class="text-gray-700 hover:bg-gray-50">
+                    <td class="p-3 font-medium">
+                      Fall 2024 - Engineering Dept.
+                    </td>
+                    <td class="p-3">
+                      <div class="flex items-center gap-2">
+                        <div
+                          class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-8 h-8"
+                          style="
+                            background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBH0mbfdXVEnFMoHvOpadh9sQ8xlfj8_U7ZPAC5jwAiemqCTc1SIPglN39IL4xZjqvtzymLZUQcxppPvtHD1odXHdh4wec40CrXXfkInYUdABv1vUNEm3BMtohwgSa_GkciYuCxk1r9yB5m-ljkzj6tbE1zbKwfx_R1GwqTmDJtj5N0rR_AhnlzBYkHNo8fzpuI9YvfQ4CDj-lK6wmxNQQX4FfeeGvXLx9oz8qesqQdBEPMYa6Cp99D-FIjCwoOR4-qYGBsN_-ycdHs');
+                          "
+                        ></div>
+                        <span>Dr. Eleanor Vance</span>
+                      </div>
+                    </td>
+                    <td class="p-3">July 15, 2024</td>
+                    <td class="p-3">
+                      <span
+                        class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800"
+                      >
+                        In Review
+                      </span>
+                    </td>
+                    <td class="p-3 text-center text-gray-500">2</td>
+                    <td class="p-3">
+                      <button class="text-gray-400 hover:text-gray-600">
+                        <span class="material-symbols-outlined"
+                          >visibility</span
+                        >
+                      </button>
+                    </td>
+                  </tr>
+                  <tr class="text-gray-700 hover:bg-gray-50">
+                    <td class="p-3 font-medium">
+                      Spring 2025 - Arts &amp; Sciences
+                    </td>
+                    <td class="p-3">
+                      <div class="flex items-center gap-2">
+                        <div
+                          class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-8 h-8"
+                          style="
+                            background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDXzmG28ERSQdOh3aL9hN_6QHRwd8D8kuje3AkRfdgZois7PoKM_izlL35jMqvIiimd82E4LunbUNqO7iPkEooOZxkJP0Whk2LKTzddeCkLOYkRV8Cp6RlqU-knuQ-zdA4T1xTN3xYkUM9P4s_F7yzb4N6Bt3CHV_oG217N0WxNHgtV4EC00fWHoIRINmkB47mumSKcZG24m3U1k34cmh56N1NVIaFPk5v7Y-ituP7RENOmtMZE6fMIA4GWh4hqMil1uQJWrXsasjNv');
+                          "
+                        ></div>
+                        <span>Dr. Samuel Bennett</span>
+                      </div>
+                    </td>
+                    <td class="p-3">July 12, 2024</td>
+                    <td class="p-3">
+                      <span
+                        class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800"
+                      >
+                        Approved
+                      </span>
+                    </td>
+                    <td class="p-3 text-center text-gray-500">5</td>
+                    <td class="p-3">
+                      <button class="text-gray-400 hover:text-gray-600">
+                        <span class="material-symbols-outlined"
+                          >visibility</span
+                        >
+                      </button>
+                    </td>
+                  </tr>
+                  <tr class="text-gray-700 hover:bg-gray-50">
+                    <td class="p-3 font-medium">Fall 2024 - Business School</td>
+                    <td class="p-3">
+                      <div class="flex items-center gap-2">
+                        <div
+                          class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-8 h-8"
+                          style="
+                            background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBJKEbAJrjTcMikUbxOSR2E7WlR-h5sxzQseYxcyrfe1_fFV6oyX_Lk30IdmWaQ5O6CqSy_P7a9zNGjCLvHpwjik5I1fjsa8bsKWuKwAEdjlbHbWYais6VYTCsZ9u2tPkphbVOebDs0C_c6OHZ88Xw0CZeA8X9IBYGMNAANQ9IC4XsN2k64XYwJlflxY7c-hDzINaE7zAaAwIFOD1V9YcCNodFuVWB95UTjUEHcOOeUQk0OC1vxd3bF4jHicNtOJD4V9yng13SNgN08');
+                          "
+                        ></div>
+                        <span>Prof. Clara Oswald</span>
+                      </div>
+                    </td>
+                    <td class="p-3">July 10, 2024</td>
+                    <td class="p-3">
+                      <span
+                        class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800"
+                      >
+                        Changes Requested
+                      </span>
+                    </td>
+                    <td class="p-3 text-center text-gray-500">8</td>
+                    <td class="p-3">
+                      <button class="text-gray-400 hover:text-gray-600">
+                        <span class="material-symbols-outlined"
+                          >visibility</span
+                        >
+                      </button>
+                    </td>
+                  </tr>
+                  <tr class="text-gray-700 hover:bg-gray-50">
+                    <td class="p-3 font-medium">
+                      Summer 2024 - Special Programs
+                    </td>
+                    <td class="p-3">
+                      <div class="flex items-center gap-2">
+                        <div
+                          class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-8 h-8"
+                          style="
+                            background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAAZaTJjz7MvCYzW89b54j2GUFhWFj_OKKN7Agz-cQeEOvctx10vCq5M-ERl9dA3I95RO8e2yEE4Hi4z9vvbm8WxlnDYndk3Ve1FDdSfAGUkph1P0nsIRD7XpgsE_Bfxd0bD5mqB-vfRbT4UIE5sxUcLR2zNTzdhtk6iRqWfpCCNMtyg6zKgR9L1IAflsOEniQMQ5R7e1yBb1kdcGM7ENagYaO7XLwq1z57KaI3TzH8_7V4odRTCwDqYvgfpwUOauLZ8c0VjkAJcPU6');
+                          "
+                        ></div>
+                        <span>Dr. Arthur Pendragon</span>
+                      </div>
+                    </td>
+                    <td class="p-3">June 28, 2024</td>
+                    <td class="p-3">
+                      <span
+                        class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800"
+                      >
+                        Approved
+                      </span>
+                    </td>
+                    <td class="p-3 text-center text-gray-500">1</td>
+                    <td class="p-3">
+                      <button class="text-gray-400 hover:text-gray-600">
+                        <span class="material-symbols-outlined"
+                          >visibility</span
+                        >
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <aside class="w-96 border-l bg-white flex flex-col hidden">
+            <div class="p-6 border-b">
+              <div class="flex justify-between items-start">
+                <div>
+                  <h3 class="text-xl font-semibold text-gray-800">
+                    Fall 2024 - Engineering
+                  </h3>
+                  <p class="text-sm text-gray-500">
+                    Submitted by Dr. Eleanor Vance
+                  </p>
+                </div>
+                <span
+                  class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800"
+                >
+                  In Review
+                </span>
+              </div>
+            </div>
+            <div class="flex-1 p-6 overflow-y-auto">
+              <h4 class="font-semibold text-gray-700 mb-4">Comments</h4>
+              <div class="space-y-6">
+                <div class="flex gap-3">
+                  <div
+                    class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-10 h-10 shrink-0"
+                    style="
+                      background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBH0mbfdXVEnFMoHvOpadh9sQ8xlfj8_U7ZPAC5jwAiemqCTc1SIPglN39IL4xZjqvtzymLZUQcxppPvtHD1odXHdh4wec40CrXXfkInYUdABv1vUNEm3BMtohwgSa_GkciYuCxk1r9yB5m-ljkzj6tbE1zbKwfx_R1GwqTmDJtj5N0rR_AhnlzBYkHNo8fzpuI9YvfQ4CDj-lK6wmxNQQX4FfeeGvXLx9oz8qesqQdBEPMYa6Cp99D-FIjCwoOR4-qYGBsN_-ycdHs');
+                    "
+                  ></div>
+                  <div>
+                    <div class="flex items-baseline gap-2">
+                      <p class="font-semibold text-gray-800">
+                        Dr. Eleanor Vance
+                      </p>
+                      <p class="text-xs text-gray-400">July 15, 10:30 AM</p>
+                    </div>
+                    <p class="text-gray-600 text-sm mt-1">
+                      Please review the proposed timetable for the upcoming
+                      semester. I've tried to optimize room usage and minimize
+                      conflicts.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex gap-3">
+                  <div
+                    class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-10 h-10 shrink-0"
+                    style="
+                      background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDXzmG28ERSQdOh3aL9hN_6QHRwd8D8kuje3AkRfdgZois7PoKM_izlL35jMqvIiimd82E4LunbUNqO7iPkEooOZxkJP0Whk2LKTzddeCkLOYkRV8Cp6RlqU-knuQ-zdA4T1xTN3xYkUM9P4s_F7yzb4N6Bt3CHV_oG217N0WxNHgtV4EC00fWHoIRINmkB47mumSKcZG24m3U1k34cmh56N1NVIaFPk5v7Y-ituP7RENOmtMZE6fMIA4GWh4hqMil1uQJWrXsasjNv');
+                    "
+                  ></div>
+                  <div>
+                    <div class="flex items-baseline gap-2">
+                      <p class="font-semibold text-gray-800">
+                        Dr. Samuel Bennett
+                      </p>
+                      <p class="text-xs text-gray-400">July 16, 2:15 PM</p>
+                    </div>
+                    <p class="text-gray-600 text-sm mt-1">
+                      Looks good overall, but there's a potential conflict with
+                      the Physics Lab schedule on Wednesday afternoons. Can we
+                      adjust that?
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-6 flex gap-3">
+                <div
+                  class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 shrink-0"
+                  style="
+                    background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBJKEbAJrjTcMikUbxOSR2E7WlR-h5sxzQseYxcyrfe1_fFV6oyX_Lk30IdmWaQ5O6CqSy_P7a9zNGjCLvHpwjik5I1fjsa8bsKWuKwAEdjlbHbWYais6VYTCsZ9u2tPkphbVOebDs0C_c6OHZ88Xw0CZeA8X9IBYGMNAANQ9IC4XsN2k64XYwJlflxY7c-hDzINaE7zAaAwIFOD1V9YcCNodFuVWB95UTjUEHcOOeUQk0OC1vxd3bF4jHicNtOJD4V9yng13SNgN08');
+                  "
+                ></div>
+                <div class="flex-1">
+                  <textarea
+                    class="form-textarea w-full text-sm border-gray-200 rounded-md focus:ring-[#38e07b] focus:border-[#38e07b]"
+                    placeholder="Add a comment..."
+                  ></textarea>
+                  <div class="flex justify-between items-center mt-2">
+                    <button class="text-gray-400 hover:text-gray-600">
+                      <span class="material-symbols-outlined text-xl"
+                        >attach_file</span
+                      >
+                    </button>
+                    <button
+                      class="bg-[#38e07b] text-white px-4 py-1.5 rounded-md text-sm font-semibold hover:bg-opacity-90"
+                    >
+                      Send
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <hr class="my-6" />
+              <h4 class="font-semibold text-gray-700 mb-4">Version History</h4>
+              <div class="space-y-4">
+                <div class="flex items-center gap-3">
+                  <span class="material-symbols-outlined text-gray-400"
+                    >description</span
+                  >
+                  <div>
+                    <p class="font-medium text-gray-700">Version 3</p>
+                    <p class="text-xs text-gray-400">July 17, 2024</p>
+                  </div>
+                </div>
+                <div class="flex items-center gap-3">
+                  <span class="material-symbols-outlined text-gray-400"
+                    >description</span
+                  >
+                  <div>
+                    <p class="font-medium text-gray-700">Version 2</p>
+                    <p class="text-xs text-gray-400">July 16, 2024</p>
+                  </div>
+                </div>
+                <div class="flex items-center gap-3">
+                  <span class="material-symbols-outlined text-gray-400"
+                    >description</span
+                  >
+                  <div>
+                    <p class="font-medium text-gray-700">Version 1</p>
+                    <p class="text-xs text-gray-400">July 15, 2024</p>
+                  </div>
+                </div>
+              </div>
+              <hr class="my-6" />
+              <div class="bg-gray-50 p-4 rounded-lg">
+                <div class="flex items-center justify-between mb-2">
+                  <p class="font-semibold text-gray-800">Notifications</p>
+                  <label
+                    class="relative inline-flex items-center cursor-pointer"
+                  >
+                    <input
+                      checked=""
+                      class="sr-only peer"
+                      type="checkbox"
+                      value=""
+                    />
+                    <div
+                      class="w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-2 peer-focus:ring-[#38e07b]/50 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#38e07b]"
+                    ></div>
+                  </label>
+                </div>
+                <p class="text-sm text-gray-500 mb-3">
+                  Get notified on status changes via email or WhatsApp.
+                </p>
+              </div>
+            </div>
+            <div class="p-6 bg-white border-t flex flex-col gap-3">
+              <button
+                class="w-full bg-[#38e07b] text-white font-bold py-2 px-4 rounded-md hover:bg-opacity-90 transition-colors"
+              >
+                Approve
+              </button>
+              <button
+                class="w-full bg-gray-200 text-gray-700 font-bold py-2 px-4 rounded-md hover:bg-gray-300 transition-colors"
+              >
+                Request Changes
+              </button>
+            </div>
+          </aside>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

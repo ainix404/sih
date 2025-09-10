@@ -1,0 +1,557 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <title>AcademicsPro - Faculty Management</title>
+    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <style type="text/tailwindcss">
+      :root {
+        --foreground-rgb: 13, 20, 27;
+        --background-rgb: 248, 250, 252;
+        --primary-color: #1173d4;
+        --secondary-color: #e7edf3;
+        --muted-color: #64748b;
+        --border-color: #e2e8f0;
+      }
+      body {
+        font-family: "Inter", sans-serif;
+        color: rgb(var(--foreground-rgb));
+        background-color: rgb(var(--background-rgb));
+      }
+      .sidebar {
+        background-color: #ffffff;
+        border-right: 1px solid var(--border-color);
+      }
+      .top-bar {
+        border-bottom: 1px solid var(--border-color);
+      }
+      .right-rail {
+        border-left: 1px solid var(--border-color);
+        background-color: #ffffff;
+      }
+      .table-header {
+        background-color: #f8fafc;
+        color: var(--muted-color);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        font-size: 0.75rem;
+        font-weight: 600;
+      }
+      .table-cell {
+        border-top: 1px solid var(--border-color);
+      }
+      .chip {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.25rem 0.75rem;
+        border-radius: 9999px;
+        font-size: 0.875rem;
+        font-weight: 500;
+        background-color: var(--secondary-color);
+        color: rgb(var(--foreground-rgb));
+      }
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.25rem 0.5rem;
+        border-radius: 0.375rem;
+        font-size: 0.75rem;
+        font-weight: 500;
+        border: 1px solid transparent;
+      }
+      .badge-success {
+        background-color: #dcfce7;
+        color: #166534;
+      }
+      .badge-warning {
+        background-color: #fef9c3;
+        color: #854d0e;
+      }
+      .badge-danger {
+        background-color: #fee2e2;
+        color: #991b1b;
+      }
+      .range-slider {
+        --range-color: var(--primary-color);
+        --track-color: #cbd5e1;
+      }
+      .range-slider input[type="range"] {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 100%;
+        background: transparent;
+        cursor: pointer;
+      }
+      .range-slider input[type="range"]::-webkit-slider-runnable-track {
+        background: var(--track-color);
+        height: 0.25rem;
+        border-radius: 0.125rem;
+      }
+      .range-slider input[type="range"]::-moz-range-track {
+        background: var(--track-color);
+        height: 0.25rem;
+        border-radius: 0.125rem;
+      }
+      .range-slider input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        margin-top: -0.375rem;
+        background-color: var(--range-color);
+        height: 1rem;
+        width: 1rem;
+        border-radius: 9999px;
+        border: 2px solid white;
+        box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+      }
+      .range-slider input[type="range"]::-moz-range-thumb {
+        background-color: var(--range-color);
+        height: 1rem;
+        width: 1rem;
+        border-radius: 9999px;
+        border: 2px solid white;
+        box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex h-screen w-full bg-slate-50 font-sans text-gray-900">
+      <aside class="sidebar flex w-64 flex-col p-6">
+        <div class="flex items-center  pb-8">
+          <svg
+            class="h-8 w-8 text-blue-600"
+            fill="none"
+            viewBox="0 0 48 48"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <!-- <path
+              clip-rule="evenodd"
+              d="M24 4H6V17.3333V30.6667H24V44H42V30.6667V17.3333H24V4Z"
+              fill="currentColor"
+              fill-rule="evenodd"
+            ></path> -->
+          </svg>
+          <h1 class="text-2xl font-bold text-emerald-500">EduNex</h1>
+        </div>
+        <nav class="flex flex-col gap-2">
+          <a
+            class="flex items-center gap-3 rounded-md px-3 py-2 text-gray-500 hover:bg-gray-100"
+            href="#"
+          >
+            <span class="material-symbols-outlined">dashboard</span>Dashboard
+          </a>
+          <a
+            class="flex items-center gap-3 rounded-md px-3 py-2 text-gray-500 hover:bg-gray-100"
+            href="#"
+          >
+            <span class="material-symbols-outlined">calendar_today</span
+            >Timetables
+          </a>
+          <a
+            class="flex items-center gap-3 rounded-md px-3 py-2 text-gray-500 hover:bg-gray-100"
+            href="#"
+          >
+            <span class="material-symbols-outlined">meeting_room</span>Rooms
+          </a>
+          <a
+            class="flex items-center gap-3 rounded-md px-3 py-2 bg-blue-50 text-blue-600 font-semibold"
+            href="#"
+          >
+            <span class="material-symbols-outlined">group</span>Faculty
+          </a>
+          <a
+            class="flex items-center gap-3 rounded-md px-3 py-2 text-gray-500 hover:bg-gray-100"
+            href="#"
+          >
+            <span class="material-symbols-outlined">book</span>Subjects
+          </a>
+          <a
+            class="flex items-center gap-3 rounded-md px-3 py-2 text-gray-500 hover:bg-gray-100"
+            href="#"
+          >
+            <span class="material-symbols-outlined">settings</span>Settings
+          </a>
+        </nav>
+      </aside>
+      <div class="flex flex-1 flex-col">
+        <header
+          class="top-bar flex h-16 items-center justify-between bg-white px-8"
+        >
+          <div>
+            <p class="text-sm text-gray-500">
+              <a class="hover:text-gray-700" href="#">Faculty</a>
+              <span class="mx-2">/</span>
+              <span class="font-medium text-gray-800">All Faculty</span>
+            </p>
+          </div>
+          <div class="flex items-center gap-4">
+            <button
+              class="flex items-center justify-center gap-2 rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50"
+            >
+              <span class="material-symbols-outlined text-base"
+                >upload_file</span
+              >
+              Import CSV
+            </button>
+            <button
+              class="flex items-center justify-center gap-2 rounded-md bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700"
+            >
+              <span class="material-symbols-outlined text-base">add</span>
+              Add Faculty
+            </button>
+            <button class="rounded-full p-2 hover:bg-gray-100">
+              <span class="material-symbols-outlined text-gray-600"
+                >notifications</span
+              >
+            </button>
+            <div
+              class="h-10 w-10 rounded-full bg-cover bg-center"
+              style="
+                background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDJxSJA4Nuao9MDwGa51OxkwgnRLCjhzDEPVDbp23rLgmolebKtIh-HDE-Wub6ZRGOhzE5oHrk7YszvY-WPZ0lV3RZkyRik98maQuWfYSdCd4jWyALl6vb4SNufLCYyf3KdXfrYAcje1OdtiJChLKVS3qWSG-bcXDEQ5LDk1t4QMNDd7BO7nyfTz_2TRVqmwoyo3uDKLtEpgjk4TLV3Jzg98pES_xf845f9WTShF4imMvqAhBIHgu_4Q0uwjULRJzWDwQz6vqnN0bmL');
+              "
+            ></div>
+          </div>
+        </header>
+        <main class="flex flex-1 overflow-y-auto">
+          <div class="flex-1 p-8">
+            <h2 class="text-3xl font-bold tracking-tight text-gray-900 mb-6">
+              Faculty Management
+            </h2>
+            <div
+              class="overflow-x-auto rounded-lg border border-gray-200 bg-white"
+            >
+              <table class="min-w-full divide-y divide-gray-200">
+                <thead class="bg-gray-50">
+                  <tr>
+                    <th class="table-header px-6 py-3 text-left" scope="col">
+                      Name
+                    </th>
+                    <th class="table-header px-6 py-3 text-left" scope="col">
+                      Department
+                    </th>
+                    <th class="table-header px-6 py-3 text-left" scope="col">
+                      Qualified Subjects
+                    </th>
+                    <th class="table-header px-6 py-3 text-left" scope="col">
+                      Max Weekly Load
+                    </th>
+                    <th class="table-header px-6 py-3 text-left" scope="col">
+                      Availability
+                    </th>
+                    <th class="table-header px-6 py-3 text-left" scope="col">
+                      Leave Avg/Month
+                    </th>
+                    <th class="relative px-6 py-3" scope="col">
+                      <span class="sr-only">Actions</span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-200 bg-white">
+                  <tr>
+                    <td
+                      class="whitespace-nowrap px-6 py-4 text-sm font-medium text-gray-900"
+                    >
+                      Dr. Eleanor Bennett
+                    </td>
+                    <td
+                      class="whitespace-nowrap px-6 py-4 text-sm text-gray-500"
+                    >
+                      Computer Science
+                    </td>
+                    <td
+                      class="whitespace-nowrap px-6 py-4 text-sm text-gray-500"
+                    >
+                      <div class="flex flex-wrap gap-1">
+                        <span class="chip">Algorithms</span>
+                        <span class="chip">Data Structures</span>
+                      </div>
+                    </td>
+                    <td
+                      class="whitespace-nowrap px-6 py-4 text-sm text-gray-500"
+                    >
+                      20
+                    </td>
+                    <td class="whitespace-nowrap px-6 py-4 text-sm">
+                      <span class="badge badge-success">Available</span>
+                    </td>
+                    <td
+                      class="whitespace-nowrap px-6 py-4 text-sm text-gray-500"
+                    >
+                      1.5
+                    </td>
+                    <td
+                      class="whitespace-nowrap px-6 py-4 text-right text-sm font-medium"
+                    >
+                      <button class="text-blue-600 hover:text-blue-900">
+                        Edit
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      class="whitespace-nowrap px-6 py-4 text-sm font-medium text-gray-900"
+                    >
+                      Prof. Samuel Carter
+                    </td>
+                    <td
+                      class="whitespace-nowrap px-6 py-4 text-sm text-gray-500"
+                    >
+                      Mathematics
+                    </td>
+                    <td
+                      class="whitespace-nowrap px-6 py-4 text-sm text-gray-500"
+                    >
+                      <div class="flex flex-wrap gap-1">
+                        <span class="chip">Calculus</span>
+                        <span class="chip">Linear Algebra</span>
+                      </div>
+                    </td>
+                    <td
+                      class="whitespace-nowrap px-6 py-4 text-sm text-gray-500"
+                    >
+                      15
+                    </td>
+                    <td class="whitespace-nowrap px-6 py-4 text-sm">
+                      <span class="badge badge-warning"
+                        >Partially Available</span
+                      >
+                    </td>
+                    <td
+                      class="whitespace-nowrap px-6 py-4 text-sm text-gray-500"
+                    >
+                      2.0
+                    </td>
+                    <td
+                      class="whitespace-nowrap px-6 py-4 text-right text-sm font-medium"
+                    >
+                      <button class="text-blue-600 hover:text-blue-900">
+                        Edit
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      class="whitespace-nowrap px-6 py-4 text-sm font-medium text-gray-900"
+                    >
+                      Dr. Olivia Davis
+                    </td>
+                    <td
+                      class="whitespace-nowrap px-6 py-4 text-sm text-gray-500"
+                    >
+                      Physics
+                    </td>
+                    <td
+                      class="whitespace-nowrap px-6 py-4 text-sm text-gray-500"
+                    >
+                      <div class="flex flex-wrap gap-1">
+                        <span class="chip">Quantum Mechanics</span>
+                        <span class="chip">Thermodynamics</span>
+                      </div>
+                    </td>
+                    <td
+                      class="whitespace-nowrap px-6 py-4 text-sm text-gray-500"
+                    >
+                      18
+                    </td>
+                    <td class="whitespace-nowrap px-6 py-4 text-sm">
+                      <span class="badge badge-danger">Unavailable</span>
+                    </td>
+                    <td
+                      class="whitespace-nowrap px-6 py-4 text-sm text-gray-500"
+                    >
+                      1.0
+                    </td>
+                    <td
+                      class="whitespace-nowrap px-6 py-4 text-right text-sm font-medium"
+                    >
+                      <button class="text-blue-600 hover:text-blue-900">
+                        Edit
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      class="whitespace-nowrap px-6 py-4 text-sm font-medium text-gray-900"
+                    >
+                      Prof. Ethan Foster
+                    </td>
+                    <td
+                      class="whitespace-nowrap px-6 py-4 text-sm text-gray-500"
+                    >
+                      Chemistry
+                    </td>
+                    <td
+                      class="whitespace-nowrap px-6 py-4 text-sm text-gray-500"
+                    >
+                      <div class="flex flex-wrap gap-1">
+                        <span class="chip">Organic Chemistry</span>
+                        <span class="chip">Inorganic Chemistry</span>
+                      </div>
+                    </td>
+                    <td
+                      class="whitespace-nowrap px-6 py-4 text-sm text-gray-500"
+                    >
+                      22
+                    </td>
+                    <td class="whitespace-nowrap px-6 py-4 text-sm">
+                      <span class="badge badge-success">Available</span>
+                    </td>
+                    <td
+                      class="whitespace-nowrap px-6 py-4 text-sm text-gray-500"
+                    >
+                      1.2
+                    </td>
+                    <td
+                      class="whitespace-nowrap px-6 py-4 text-right text-sm font-medium"
+                    >
+                      <button class="text-blue-600 hover:text-blue-900">
+                        Edit
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      class="whitespace-nowrap px-6 py-4 text-sm font-medium text-gray-900"
+                    >
+                      Dr. Sophia Green
+                    </td>
+                    <td
+                      class="whitespace-nowrap px-6 py-4 text-sm text-gray-500"
+                    >
+                      Biology
+                    </td>
+                    <td
+                      class="whitespace-nowrap px-6 py-4 text-sm text-gray-500"
+                    >
+                      <div class="flex flex-wrap gap-1">
+                        <span class="chip">Genetics</span>
+                        <span class="chip">Cell Biology</span>
+                      </div>
+                    </td>
+                    <td
+                      class="whitespace-nowrap px-6 py-4 text-sm text-gray-500"
+                    >
+                      16
+                    </td>
+                    <td class="whitespace-nowrap px-6 py-4 text-sm">
+                      <span class="badge badge-warning"
+                        >Partially Available</span
+                      >
+                    </td>
+                    <td
+                      class="whitespace-nowrap px-6 py-4 text-sm text-gray-500"
+                    >
+                      1.8
+                    </td>
+                    <td
+                      class="whitespace-nowrap px-6 py-4 text-right text-sm font-medium"
+                    >
+                      <button class="text-blue-600 hover:text-blue-900">
+                        Edit
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <aside class="right-rail w-80 flex-shrink-0 p-6">
+            <h3 class="text-lg font-semibold text-gray-900">Filters</h3>
+            <div class="mt-4 space-y-6">
+              <div>
+                <label
+                  class="block text-sm font-medium text-gray-700"
+                  for="department"
+                  >Department</label
+                >
+                <select
+                  class="mt-1 block w-full rounded-md border-gray-300 py-2 pl-3 pr-10 text-base focus:border-blue-500 focus:outline-none focus:ring-blue-500 sm:text-sm"
+                  id="department"
+                  name="department"
+                >
+                  <option>All Departments</option>
+                  <option>Computer Science</option>
+                  <option>Mathematics</option>
+                  <option>Physics</option>
+                  <option>Chemistry</option>
+                  <option>Biology</option>
+                </select>
+              </div>
+              <div class="range-slider">
+                <label
+                  class="block text-sm font-medium text-gray-700"
+                  for="max-load"
+                  >Max Weekly Load</label
+                >
+                <div class="mt-2">
+                  <input
+                    class="w-full"
+                    id="max-load"
+                    max="40"
+                    min="0"
+                    name="max-load"
+                    type="range"
+                    value="25"
+                  />
+                  <div class="flex justify-between text-xs text-gray-500 mt-1">
+                    <span>0</span>
+                    <span>40</span>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <span class="block text-sm font-medium text-gray-700"
+                  >Availability Presets</span
+                >
+                <div class="mt-2 flex flex-wrap gap-2">
+                  <label
+                    class="cursor-pointer rounded-full border border-gray-300 px-3 py-1 text-sm text-gray-700 has-[:checked]:border-blue-600 has-[:checked]:bg-blue-50 has-[:checked]:text-blue-700"
+                  >
+                    <input
+                      class="sr-only"
+                      name="availability"
+                      type="radio"
+                      value="available"
+                    />
+                    Available
+                  </label>
+                  <label
+                    class="cursor-pointer rounded-full border border-gray-300 px-3 py-1 text-sm text-gray-700 has-[:checked]:border-blue-600 has-[:checked]:bg-blue-50 has-[:checked]:text-blue-700"
+                  >
+                    <input
+                      class="sr-only"
+                      name="availability"
+                      type="radio"
+                      value="unavailable"
+                    />
+                    Unavailable
+                  </label>
+                  <label
+                    class="cursor-pointer rounded-full border border-gray-300 px-3 py-1 text-sm text-gray-700 has-[:checked]:border-blue-600 has-[:checked]:bg-blue-50 has-[:checked]:text-blue-700"
+                  >
+                    <input
+                      class="sr-only"
+                      name="availability"
+                      type="radio"
+                      value="partially-available"
+                    />
+                    Partially Available
+                  </label>
+                </div>
+              </div>
+            </div>
+          </aside>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>
